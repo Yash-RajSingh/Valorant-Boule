@@ -25,7 +25,7 @@ const tasklist = [
         work: "None of the players must not let go of the W key untill they are dead."
     },
     {
-        name: "Conquering Like A Kangaroo kangaroo",
+        name: "Conquering Like a kangaroo",
         work: "All of the players must continue to jump while moving and shooting."
     },
     {
@@ -63,6 +63,66 @@ const tasklist = [
     {
         name: "Cloud Campers",
         work: "Using Brimstone/Omen's smokes, the team must set smoke clouds at the default entry spots of their location and aren't allowed to exit the smoke cloud untill after they've disappeared."
+    },
+    {
+        name: "Death tempest",
+        work: "As soon as a player dies, they must make the sound of a storm untill all of their teammates are dead."
+    },
+    {
+        name: "C.O.D. Fever",
+        work: "All of the players must buy and play with Buckys."
+    },
+    {
+        name: "Spamming Beast Unleashed!",
+        work: "All of the players must buy and play with Odins or Ares"
+    },
+    {
+        name: "Shush!",
+        work: "All of the players must buy and play with Ghosts."
+    },
+    {
+        name: "Pew Pew Guns!",
+        work: `All of the players must buy Ghosts and continously say "Pew" when firing.`
+    },
+    {
+        name: "Twin Complex",
+        work: "All of the players are only allowed to kill their twins in the enemy team before killing anyone else."
+    },
+    {
+        name: "Toe Hunter",
+        work: "The players are only allowed to aim the the feet of the enemies"
+    },
+    {
+        name: "Loud Mouth",
+        work: "All of the players must speak out every single thing that they are doing."
+    },
+    {
+        name: "Dumb and Dumber",
+        work: "All of the players must use wrong callouts throughout the game."
+    },
+    {
+        name: "Eagle Eye",
+        work: "All of the players must play this round using snipers, first priority is Operator and second is Marshal."
+    },
+    {
+        name: "The Hangover",
+        work: "All the players must set their mouse sensitivity to maximum."
+    },
+    {
+        name: "Savage Maniac",
+        work: "All of the players must only spray fire using a Vandal or Bulldog."
+    },
+    {
+        name: "Grrrrrrr",
+        work: "All of the players must only play with a Frenzy or a Stinger."
+    },
+    {
+        name: "Blinding Lights",
+        work: "All the players must rush into enemy flashes before they are allowed to attack them."
+    },
+    {
+        name: "Spotter Head",
+        work: "The players must choose a spotter whose job is to confront and call out the enemies name. The other player are only allowed to attack the enemies spotted by the spotter."
     }
 ]
 
@@ -79,9 +139,13 @@ const taskSelect = () =>{
     if(numb==current){
         numb=numb+1;
     }
-    else if(numb==current || numb==count){
+    else if(numb>current){
         numb=numb-1;
     }
+    else if(numb<=count){
+        numb=numb+1;
+    }
+
     current = numb;
         const test = tasklist[numb];
             body2.innerHTML = `<div class="taskcard">
