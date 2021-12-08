@@ -92,4 +92,8 @@ const taskSelect = () =>{
         return current;
 }
 
+const active2 = document.getElementById("btn2");
+active2.addEventListener('click', () =>{
+    taskSelect();
+})
 

@@ -5,6 +5,9 @@
     --white: #FFFBF5;
     --black: #0f1923;
     --blue: #364966;
+    --motto: 45px;
+    --head: 65px;
+    --txt: 60px;
 }
 *{
     margin: 0;
@@ -14,6 +17,10 @@
 @font-face {
     font-family: Force Commander Expanded;
     src: url(forcecommanderexpand.ttf);
+}
+@font-face {
+    font-family: Force Commander;
+    src: url(forcecommander.ttf);
 }
 @font-face {
     font-family: valorant;
@@ -31,7 +38,7 @@ body{
 }
 .header h1{
     padding: 5px;
-    font-size: 64px;
+    font-size: var(--head);
     font-family: 'VALORANT';
     color: black;
     margin-left: 30%;                                             
@@ -50,12 +57,11 @@ body{
     margin: 0 auto;
     margin-top: 5%;
     padding: 10px;
-    /* border: 2px solid white; */
 }
 .instruction h1{
     color: var(--crimson);
     letter-spacing: 5px;
-    font-size: 43px;
+    font-size: var(--motto);
     font-family: 'Force Commander Expanded';
     text-align: center;
 }
@@ -67,7 +73,6 @@ body{
     flex-wrap: wrap;
     margin-top: 4%;
     justify-content: center;
-    /* border: 2px solid rgb(33, 146, 131); */
 }
 .info h2{
     color: var(--white);
@@ -84,13 +89,12 @@ body{
     width: 70%;
     font-family: 'Bebas Neue', cursive;
     font-family: 'Oswald', sans-serif;
-    /* border: 2px solid forestgreen; */
 }
 .info-2 p{
     font-family: 'Roboto Slab', serif;
 }
 .img{
-    /* border: 3px solid palevioletred; */
+    
     border-radius: 7px;
     float: right;
 }
@@ -101,25 +105,24 @@ body{
 
 /* -------CHOOSING DIV STYLING------- */
 .choose{
-    /* border: 2px solid yellow; */
     margin-top: 5%;
     padding: 10px;
 }
 .choose h1{
     color: var(--crimson);
     letter-spacing: 5px;
-    font-size: 45px;
+    font-size: var(--motto);
     font-family: 'Force Commander Expanded';
     text-align: center;
 }
 .buttons{
-    /* border: 2px solid magenta; */
     display: flex;
     justify-content: center;
     margin-top: 2%;
     padding: 40px;
 }
 .buttons button{
+    font-family: valorant;
     color: black;
     border: 0px;
     width: 150px;
@@ -129,27 +132,27 @@ body{
     border-radius: 10px;
     border: 3px solid var(--bright-red);
 }
+
 .buttons button:hover{
     background: var(--crimson);
     color: black;
     border: 3px solid white;
-    transition: background-color 0.2s ease-in;
-    transition: -webkit-transform 0.3s ease-out;
-    transition: transform 0.3s ease-out;
-
 }
+
 
 #display-1{
     text-align: center;
 }
 #a-msg{
-    font-size: 50px;
+    font-size: 40px;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 1.2px var(--crimson);
+    font-family: 'Force Commander';
 }
 #container{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    /* border: 2px solid seagreen; */
     width: 90%;
     margin: 0 auto;
     margin-top: 2%;
@@ -163,6 +166,7 @@ body{
     background: var(--crimson);
     text-align: center;
     padding: 5px;
+    margin-top: 2%;
 }
 .agentcard h1{
     color: black;
@@ -172,7 +176,6 @@ body{
 /* ---------TASK BODY STYLING----------- */
 #container2{
     margin-top: 4%;
-    /* border: 2px solid gold; */
     text-align: center;
     padding: 10px;
 }
@@ -185,23 +188,34 @@ body{
     border-radius: 20px;
 }
 .t-msg{
-    font-size: 65px;
+    font-size: var(--head);
     color: black;
     margin: 3%;
 }
 .ttask{
-    font-size: 60px;
+    font-size: var(--txt);
     color: black;
     margin: 4%;
 }
 
 .go{
     text-align: center;
-    font-size: 80px;
-    color: var(--crimson);
+    font-size: var(--head);
     letter-spacing: 5px;
     font-family: 'Force Commander Expanded';
+    color: transparent;
+    -webkit-text-stroke: 1px var(--crimson);
+    background: url(back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
 }
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
 .end{
     width: 98%;
     margin: 0 auto;
@@ -217,15 +231,15 @@ body{
 .footer{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     background: var(--bright-red);
     margin-top: 5%;
-    font-size: 35px;
+    font-size: 25px;
 }
 .footer p{
     color: black;
-    padding: 10px;
+    padding: 2px;
 }
 .footer a{
     text-decoration: none;
@@ -233,7 +247,181 @@ body{
 
 }
 .pp3{
-    padding: 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
 }
+
+
+
+/* -------MEDIA QUERRIES------- */
+@media screen and (min-device-width: 1000px) {
+    :root{
+        --motto: 40px;
+        --head: 60px;
+        --txt: 55px;
+    }
+}
+@media screen and (min-device-width: 800px) and (max-device-width: 1000px) {
+     :root{
+        --motto: 35px;
+        --head: 55px;
+        --txt: 50px;
+    }   
+    .header h1{
+    margin-left: 20%;
+    }
+    .info-2{
+        width: 90%;
+    }
+    #container{
+        width: 95%;
+    }
+}
+@media screen and (min-device-width: 600px) and (max-device-width: 799px){
+    :root{
+        --motto: 27px;
+        --head: 45px;
+        --txt: 40px;
+    }   
+    .header h1{
+    margin-left: 22%;
+    margin-top: 2%;
+    }
+    .info-2{
+        width: 90%;
+    }
+    .img img{
+        margin-top: 2%;
+    }
+    #container{
+        width: 95%;
+    }
+}
+@media screen and (min-device-width: 405px) and (max-device-width: 599px){
+    :root{
+        --motto: 25px;
+        --head: 33px;
+        --txt: 30px;
+    }   
+    .header h1{
+    margin-left: 22%;
+    margin-top: 2%;
+    }
+    .info-2{
+        width: 95%;
+    }
+    .img img{
+        margin-top: 2%;
+    }
+    #container{
+        width: 95%;
+    }
+    .header img{
+        width: 60px;
+    }
+    .a-img{
+        width: 40%;
+        height: 60%;
+        padding: 2px;
+    }
+    .agentcard{
+        width: 40%;
+        height: 63%;
+        padding: 5px;
+    }
+    .footer{
+        font-size: 15px;
+    }
+    .pp3{
+        font-size: 10px;
+    }
+    .agentcard h1{
+        font-size: var(--motto);
+    }
+}
+@media screen and (min-device-width: 300px) and (max-device-width: 404px){
+    :root{
+        --motto: 20px;
+        --head: 28px;
+        --txt: 25px;
+    }   
+    .header h1{
+    margin-left: 17%;
+    margin-top: 2%;
+    }
+    .info-2{
+        width: 95%;
+    }
+    .img img{
+        margin-top: 2%;
+    }
+    #container{
+        width: 95%;
+    }
+    .header img{
+        width: 45px;
+    }
+    .a-img{
+        width: 40%;
+        height: 60%;
+        padding: 2px;
+    }
+    .agentcard{
+        width: 40%;
+        height: 63%;
+        padding: 5px;
+    }
+    .footer{
+        font-size: 12px;
+    }
+    .pp3{
+        font-size: 10px;
+    }
+    .agentcard h1{
+        font-size: var(--motto);
+    }
+}
+@media screen and (max-device-width: 299px){
+    :root{
+        --motto: 18px;
+        --head: 25px;
+        --txt: 22px;
+    }   
+    .header h1{
+    margin-left: 13%;
+    margin-top: 2%;
+    }
+    .info-2{
+        width: 97%;
+    }
+    .img img{
+        margin-top: 2%;
+    }
+    #container{
+        width: 98%;
+    }
+    .header img{
+        width: 35px;
+    }
+    .a-img{
+        width: 40%;
+        height: 60%;
+        padding: 2px;
+    }
+    .agentcard{
+        width: 40%;
+        height: 63%;
+        padding: 5px;
+    }
+    .footer{
+        font-size: 10px;
+    }
+    .pp3{
+        font-size: 8px;
+    }
+    .agentcard h1{
+        font-size: var(--motto);
+    }
+
+}
+

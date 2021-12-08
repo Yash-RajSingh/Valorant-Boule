@@ -99,7 +99,7 @@ console.log(newlist)
 const body = document.getElementById("container");
 const Amsg = document.getElementById("container0");
 var audio = new Audio('images/jackpot.mp3');
-const agentSelect = async () =>{
+const agentSelect = () =>{
     audio.play();
     Amsg.innerHTML =`<h2 id="a-msg">Your Agents Are</h2>`;
     body.innerHTML = `
@@ -112,3 +112,8 @@ const agentSelect = async () =>{
     }).join('')}`
     window.location.href = "index.html#container";
 }
+
+const active = document.getElementById("btn1");
+active.addEventListener('click', () =>{
+    agentSelect();
+});
