@@ -99,7 +99,7 @@ console.log(newlist)
 const body = document.getElementById("container");
 const Amsg = document.getElementById("container0");
 var audio = new Audio('images/jackpot.mp3');
-const agentSelect = () =>{
+const agentSelect = async () =>{
     audio.play();
     Amsg.innerHTML =`<h2 id="a-msg">Your Agents Are</h2>`;
     body.innerHTML = `
