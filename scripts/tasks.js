@@ -132,7 +132,7 @@ const tasklist = [
 const count = tasklist.length;
 const body2 = document.getElementById("container2");
 var current =0;
-var audio = new Audio('images/process.mp3');
+var audio = new Audio('./images/process.mp3');
 const taskSelect = () =>{
     audio.play();
     var numb = Math.floor((Math.random() * count) + 1);

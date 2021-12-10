@@ -1,5 +1,6 @@
 // 1-brim, 2-viper, 3-omen, 4-kj, 5-cypher, 6-sova, 7-sage, 8-pheonix, 9-jett, 
 // 10-reyna, 11-raze, 12-breach, 13-skye, 14-yoru, 15-astra, 16-kayo, 17-chamber
+
 const agents = [
     {
         name: "Brimstone",
@@ -98,9 +99,9 @@ for(const a in selected){
 console.log(newlist)
 const body = document.getElementById("container");
 const Amsg = document.getElementById("container0");
-var audio = new Audio('images/jackpot.mp3');
+var sound = new Audio("./images/jackpot.mp3");
 const agentSelect = () =>{
-    audio.play();
+    sound.play();
     Amsg.innerHTML =`<h2 id="a-msg">Your Agents Are</h2>`;
     body.innerHTML = `
     ${newlist.map(function(newlist){
@@ -110,7 +111,7 @@ const agentSelect = () =>{
             <h1>${newlist.name}</h1>
             </div>`
     }).join('')}`
-    window.location.href = "index.html#container";
+    window.location.href = "index.html#a-msg";
 }
 
 const active = document.getElementById("btn1");
