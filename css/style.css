@@ -250,7 +250,9 @@ body{
     text-align: center;
     font-size: 18px;
 }
-
+strong{
+    color: black;
+}
 
 
 /* -------MEDIA QUERRIES------- */
