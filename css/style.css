@@ -305,6 +305,9 @@ strong{
         --head: 33px;
         --txt: 30px;
     }   
+    .header{
+        height: 60px;
+    }
     .header h1{
     margin-left: 22%;
     margin-top: 2%;
@@ -341,12 +344,24 @@ strong{
         font-size: var(--motto);
     }
 }
+
+@media screen and (max-device-width: 408px){
+    .header{
+        height: 50px;
+    }
+    .header img{
+        width: 45px;
+    }
+}
 @media screen and (min-device-width: 300px) and (max-device-width: 404px){
     :root{
         --motto: 20px;
         --head: 28px;
         --txt: 25px;
-    }   
+    }  
+    .header{
+        height: 45px;
+    } 
     .header h1{
     margin-left: 17%;
     margin-top: 2%;
