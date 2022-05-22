@@ -14,6 +14,23 @@
     color: var(--white);
 }
 
+/*---------Custom Scrollbar Styling---------*/
+::-webkit-scrollbar {
+    width: 0.5vw;
+    /* background: var(--maroon); */
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--maroon);
+    /* border: 0.5px solid var(--dark-red); */
+    background-clip: padding-box;
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--maroon);
+  }
+
+
 @font-face {
     font-family: Force Commander Expanded;
     src: url(forcecommanderexpand.ttf);
